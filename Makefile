@@ -11,10 +11,10 @@ LIBS = -lm
 
 EXECUTABLE = anonBBS
 
-_DEPS = commands.h 
+_DEPS = commands.h users.h
 DEPS = $(patsubst %,$(IDIR)/%,$(_DEPS))
 
-_OBJ = main.o commands.o
+_OBJ = main.o commands.o users.o
 OBJ = $(patsubst %,$(ODIR)/%,$(_OBJ))
 
 

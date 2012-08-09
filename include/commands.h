@@ -17,7 +17,6 @@ class commands {
 	public:
 		commands();
 		~commands();
-
-	void processCommands();
+		void processCommands();
 };
 
