@@ -3,3 +3,11 @@
 
 using namespace std;
 
+class commands {
+	
+	public:
+	commands();
+	~commands();
+
+};
+
