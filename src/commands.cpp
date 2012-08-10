@@ -1,4 +1,5 @@
 #include "commands.h"
+#include <stdio.h>
 
 // Constructors
 commands::commands()
