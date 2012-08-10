@@ -1,11 +1,12 @@
 #include <string>
 #include <iostream>
 
-using namespace std;
-
+#ifndef USERS_H
+#define USERS_H
+ 
 class users{
 	 private:
-			string nickName;
+			std::string nickName;
 
 	 public:
 	 		// Constructors
@@ -16,8 +17,8 @@ class users{
 
 			// Methods
 			void setNickName();
-			string getNickName();
+			std::string getNickName();
 
-			// Variables
-			users user; 
 };
+
+#endif

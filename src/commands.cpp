@@ -3,18 +3,18 @@
 // Constructors
 commands::commands()
 {
-	 cout << "Construct" << endl;
+	 std::cout << "Construct" << std::endl;
 	 processing = true;
 
 
 	 user.setNickName();
-	 cout << "Hi " << user.getNickName() << endl;
+	 std::cout << "Hi " << user.getNickName() << std::endl;
 }
 
 // Destructors
 commands::~commands()
 {
-	 cout << "Destruct" << endl;
+	 std::cout << "Destruct" << std::endl;
 }
 
 
@@ -25,19 +25,19 @@ commands::~commands()
 // Main process called from main.cpp
 void commands::processCommands()
 {
-	 string input = "";
+	 std::string input = "";
 	 bool firstPass;
 	 int i;
-	 vector <string> v;
+	 std::vector <std::string> v;
 
-	 cout << "> ";
-	 getline(cin, input);
+	 std::cout << "> ";
+	 getline(std::cin, input);
 
 	 firstPass = true;
-	 istringstream iss(input);
+	 std::istringstream iss(input);
 	 do
 	 {
-			string sub;
+			std::string sub;
 			iss >> sub;
 			if (firstPass) 
 			{
@@ -54,6 +54,23 @@ void commands::processCommands()
 				 v.push_back(sub);
 			}
 	 } while (iss);
-	 cout << (int) v.size();
+
+	 execCommand(currentCommand, v);
 	 v.clear();
 }
+
+void commands::execCommand(std::string cmd, std::vector <std::string> v)
+{
+	std::cout << cmd << v.size();
+}
+
+void commands::help()
+{
+	 std::cout << "--help" << std::endl;
+}
+
+void commands::clear()
+{
+	 std::cout << "--clear" << std::endl;
+}
+

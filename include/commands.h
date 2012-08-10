@@ -6,16 +6,25 @@
 #include <vector>
 #include "users.h" 
 
-#define ARRAY_SIZE 100
 
-using namespace std;
+#ifndef COMMANDS_H
+#define COMMANDS_H
+
+#define ARRAY_SIZE 100
 
 class commands {
 	 private:
-			string currentCommand;
+			// Methods
+			void execCommand(std::string cmd, std::vector <std::string> v);
+			// Executable functions
+			void clear();
+			void help();
+
+			// Variables
+			std::string currentCommand;
 
 	 public:
-	 		// Constructors
+			// Constructors
 			commands();
 
 			// Destructors
@@ -26,5 +35,7 @@ class commands {
 
 			// Variables
 			bool processing;
+			users user; 
 };
 
+#endif

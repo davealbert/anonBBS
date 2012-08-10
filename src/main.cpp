@@ -5,7 +5,7 @@
 int main()
 {
 	 // TODO: display motd stored in the user directory.
-	 cout << "Anonymous BBS -- anonBBS v 1.0.1" << endl;
+	 std::cout << "Anonymous BBS -- anonBBS v 1.0.1" << std::endl;
 
 	 commands cmd;	 
 	 while (cmd.processing)
@@ -13,6 +13,6 @@ int main()
 			cmd.processCommands();
 	 }
 
-	 cout << endl << "Good Bye!" << endl;
+	 std::cout << std::endl << "Good Bye!" << std::endl;
 	 return 0;
 }

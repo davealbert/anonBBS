@@ -15,12 +15,12 @@ users::~users()
 // Setters
 void users::setNickName()
 {
-	 cout << "Please enter a nickname: ";
-	 getline(cin, nickName);
+	 std::cout << "Please enter a nickname: ";
+	 getline(std::cin, nickName);
 }
 
 // Getters
-string users::getNickName()
+std::string users::getNickName()
 {
 	 return nickName;
 }
