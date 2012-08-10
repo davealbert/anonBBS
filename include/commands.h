@@ -18,7 +18,7 @@ class commands {
 			void execCommand(std::string cmd, std::vector <std::string> v);
 			// Executable functions
 			void clear();
-			void help();
+			void help(std::vector <std::string> v);
 
 			// Variables
 			std::string currentCommand;

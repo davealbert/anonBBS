@@ -61,10 +61,21 @@ void commands::processCommands()
 
 void commands::execCommand(std::string cmd, std::vector <std::string> v)
 {
-	std::cout << cmd << v.size();
+	 //std::cout << cmd << v.size();
+	 if (cmd == "help")
+	 help(v);
+	 else if (cmd == "clear")
+	 clear();
+
+
+	 else if (cmd == ""){}
+
+	 else
+	 std::cout << cmd << " :command not found" << std::endl;
+
 }
 
-void commands::help()
+void commands::help(std::vector <std::string> v)
 {
 	 std::cout << "--help" << std::endl;
 }
