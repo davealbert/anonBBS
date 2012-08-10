@@ -34,7 +34,7 @@ void commands::processCommands()
 				 firstPass = false;
 				 if (currentCommand == "exit")
 				 {
-						exit(0);
+					processing = false;	
 				 }
 
 			} else 
@@ -42,6 +42,6 @@ void commands::processCommands()
 				 v.push_back(sub);
 			}
 	 } while (iss);
-	 cout << v[0];
+	 cout << (int) v.size();
 	 v.clear();
 }

@@ -15,5 +15,8 @@ int main()
 	 {
 			cmd.processCommands();
 	 }
+
+
+	 cout << endl << "Good Bye!" << endl;
 	 return 0;
 }
