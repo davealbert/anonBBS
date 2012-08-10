@@ -82,6 +82,9 @@ void commands::help(std::vector <std::string> v)
 
 void commands::clear()
 {
-	 std::cout << "--clear" << std::endl;
+	 //std::cout << "--clear" << std::endl;
+	 char esc = 27;
+	 printf("%c%s",esc,"[2J");
+	 printf("%c%s",esc,"[1;1H");
 }
 
