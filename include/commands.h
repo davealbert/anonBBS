@@ -4,21 +4,27 @@
 #include <cstring>
 #include <stdlib.h>
 #include <vector>
+#include "users.h" 
 
 #define ARRAY_SIZE 100
-
 
 using namespace std;
 
 class commands {
 	 private:
-	 string currentCommand;
-
+			string currentCommand;
 
 	 public:
-	 commands();
-	 ~commands();
-	 void processCommands();
-	 bool processing;
+	 		// Constructors
+			commands();
+
+			// Destructors
+			~commands();
+
+			// Methods
+			void processCommands();
+
+			// Variables
+			bool processing;
 };
 

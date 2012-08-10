@@ -4,12 +4,20 @@
 using namespace std;
 
 class users{
-	private:
-		string nickName;
+	 private:
+			string nickName;
 
-	public:
-		users(); 
-		~users(); 
-		void setNickName();
-		string getNickName();
+	 public:
+	 		// Constructors
+			users(); 
+
+			// Destructors
+			~users(); 
+
+			// Methods
+			void setNickName();
+			string getNickName();
+
+			// Variables
+			users user; 
 };

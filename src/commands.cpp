@@ -1,16 +1,28 @@
 #include "commands.h"
 
+// Constructors
 commands::commands()
 {
 	 cout << "Construct" << endl;
 	 processing = true;
+
+
+	 user.setNickName();
+	 cout << "Hi " << user.getNickName() << endl;
 }
 
+// Destructors
 commands::~commands()
 {
 	 cout << "Destruct" << endl;
 }
 
+
+// Methods
+//
+
+
+// Main process called from main.cpp
 void commands::processCommands()
 {
 	 string input = "";
@@ -34,7 +46,7 @@ void commands::processCommands()
 				 firstPass = false;
 				 if (currentCommand == "exit")
 				 {
-					processing = false;	
+						processing = false;	
 				 }
 
 			} else 
