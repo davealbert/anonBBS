@@ -64,10 +64,14 @@ void commands::execCommand(std::string cmd, std::vector <std::string> v)
 {
 	 //std::cout << cmd << v.size();
 	 if (cmd == "help")
-	 help(v);
-	 else if (cmd == "clear")
-	 clear();
+	 {
+			help(v);
+	 }
 
+	 else if (cmd == "clear")
+	 {
+			clear();
+	 }
 
 	 else if (cmd == ""){}
 
@@ -78,7 +82,30 @@ void commands::execCommand(std::string cmd, std::vector <std::string> v)
 
 void commands::help(std::vector <std::string> v)
 {
-	 std::cout << "--help" << std::endl;
+	 if (v.size() > 1 )
+	 {
+			showHelp(v[1]);
+	 }
+	 else
+	 {
+			std::string subTopic;
+
+			std::cout << "\n   help - The HELP command invokes the HELP Facility to display" << std::endl;
+			std::cout << "          information about a command or topic.\n" << std::endl;
+			std::cout << "   help     clear    exit    \n\n"  << "Topic? ";
+			std::getline(std::cin, subTopic);
+
+			if (subTopic != "")
+			{
+				 showHelp(subTopic);
+				 help(v);
+			} 
+	 }
+}
+
+void commands::showHelp(std::string topic)
+{
+	 std::cout << "\n\n Help on Topic: " << topic << "\n" << std::endl;
 }
 
 void commands::clear()

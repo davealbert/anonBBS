@@ -16,9 +16,11 @@ class commands {
 	 private:
 			// Methods
 			void execCommand(std::string cmd, std::vector <std::string> v);
+
 			// Executable functions
 			void clear();
 			void help(std::vector <std::string> v);
+			void showHelp(std::string);
 
 			// Variables
 			std::string currentCommand;
