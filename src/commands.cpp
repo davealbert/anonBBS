@@ -84,7 +84,7 @@ void commands::help(std::vector <std::string> v)
 {
 	 if (v.size() > 1 )
 	 {
-			showHelp(v[1]);
+			showHelp(v[0]);
 	 }
 	 else
 	 {
