@@ -11,12 +11,14 @@
 using namespace std;
 
 class commands {
-	private:
-		string currentCommand;
+	 private:
+	 string currentCommand;
 
-	public:
-		commands();
-		~commands();
-		void processCommands();
+
+	 public:
+	 commands();
+	 ~commands();
+	 void processCommands();
+	 bool processing;
 };
 

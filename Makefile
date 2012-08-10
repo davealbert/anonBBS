@@ -27,6 +27,10 @@ $(EXECUTABLE): $(OBJ)
 
 
 
-.PHONY: clean
+.PHONY: clean install
 clean:
 	rm -f $(ODIR)/*.o *~ core $(INCDIR)/*~ $(EXECUTABLE)
+
+install:
+	sudo cp $(EXECUTABLE) /usr/local/bin
+

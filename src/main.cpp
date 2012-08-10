@@ -5,13 +5,15 @@
 //
 int main()
 {
-	 cout << "Anonymous BBS -- anonBBS" << endl;
+	 cout << "Anonymous BBS -- anonBBS v 1.0.1" << endl;
 	 commands cmd;	 
 	 users user; 
 
 	 user.setNickName();
 	 cout << "Hi " << user.getNickName() << endl;
-	 cmd.processCommands();
-
+	 while (cmd.processing)
+	 {
+			cmd.processCommands();
+	 }
 	 return 0;
 }
